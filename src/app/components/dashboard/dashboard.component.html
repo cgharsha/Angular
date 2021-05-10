@@ -1,0 +1,12 @@
+<div class="dashboard-wrap">
+    <div class="dashboard-header">
+        Check topics
+    </div>
+    <div class="dashboard-content">
+        <ul>
+            <li *ngFor="let page of pages">
+                <span [routerLink]='page.pageURL'>{{ page.pageName }}</span>
+            </li>
+        </ul>
+    </div>
+</div>

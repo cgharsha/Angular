@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./variables";
+@import "./material";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: $regularFont;
+  background: var(--theme-background);
+  color: var(--theme-color);
+  // transition: all ease-in-out 400ms;
+  transition: all ease-in-out 100ms;
+}
+
+*:focus {
+  outline: none;
+  background-color: none !important;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.fullpage-wrap {
+  display: flex;
+  flex-direction: row;
+}

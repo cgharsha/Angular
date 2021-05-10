@@ -1,0 +1,13 @@
+@import '../../../styles/variables';
+
+.js-methods-wrap{
+    width: 100%;
+    padding: 2rem 1rem;
+    .js-methods-header{
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+    }
+    .js-methods-content{
+        width: 100%;
+    }
+}

@@ -1,0 +1,22 @@
+@import '../../../styles/variables';
+
+.dashboard-wrap{
+    width: 100%;
+    padding: 2rem 1rem;
+    .dashboard-header{
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+    }
+    .dashboard-content{
+        ul{
+            margin: 1rem;
+            li{
+                margin: 0 0 0.5rem 0.5rem;
+                span{
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
