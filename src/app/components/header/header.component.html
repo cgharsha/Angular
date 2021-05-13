@@ -1,1 +1,61 @@
-<p>header works!</p>
+<header>
+    <div class="header-content-left">
+      <div class="header-brand-logo">
+        <!-- <img src="assets/images/accenture_logo.svg" alt="Accenture" /> -->
+      </div>
+      <!-- <div class="header-separator">|</div> -->
+      <!-- <div class="header-mynav-logo">
+        my<span>Nav</span>
+      </div> -->
+      <!-- <div class="header-separator">|</div> -->
+      <div class="header-app-logo" routerLink="/">
+        <!-- <img src="assets/images/app-logo.svg" alt="SSDG" /> -->
+      </div>
+    </div>
+    <div class="header-options-wrap">
+      <div class="override-item">
+        <div routerLink="/dashboard">Dashboard</div>
+      </div>
+      <!-- <div
+        class="override-item"
+        *ngIf="activePath == '/' || activePath == '/business-principle-navigator'"
+      > -->
+      <div class="override-item">
+        <div (click)="reset()">Reset Simulation</div>
+      </div>
+
+      <!-- <div
+        class="header-options-items"
+        *ngIf="activePath == '/' || activePath == '/scenario'"
+      >
+        <mat-select [(value)]="selected">
+          <mat-option value="option1">Share Your Scenario</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </div> -->
+
+      <div class="header-options-items">
+        <div class="round">
+          <input
+            type="checkbox"
+            id="dark"
+            name="dark"
+            value="dark"
+            [(ngModel)]="dark"
+          />
+          <span for="dark">Dark Mode</span>
+        </div>
+        <!-- <label>
+      <input type="checkbox" name="dark" [(ngModel)]="dark" ><span>Enable Dark Theme</span>
+    </label> -->
+      </div>
+    </div>
+    <div class="header-content-right">
+      <!-- <div class="header-user-name">{{userDetails.name}}</div> -->
+      <div class="header-user-logo">
+        <img src="{{ userDetails.image }}" alt="" />
+      </div>
+    </div>
+  </header>
+  
