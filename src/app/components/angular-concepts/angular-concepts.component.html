@@ -4,7 +4,20 @@
     </div>
     <div class="component-section-content">
         <p>angular-concepts works!</p>
-        
+        <div>{{ childMessage }}</div>
+
+        <div>{{ messageFromChild }}</div>
+
+        <div #elementRefExample>
+        </div>
+
+        <button (click)="openDialog()">Open Dialog</button>
+    </div>
+    <div class="component-section-content">
+        <app-angular-concepts-child 
+        [retrieveParentMessageToChild]="parentMessage"
+        (messageEvent)= "recieveMessageFromChild($event)"
+        ></app-angular-concepts-child>
     </div>
 </div>
 

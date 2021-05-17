@@ -10,6 +10,8 @@ export class JavascriptTipsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    
   }
 
 }

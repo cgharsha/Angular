@@ -1,0 +1,11 @@
+<div class="showbox" *ngIf="!errorMsg">
+    <div class="spinner-box">
+        <div class="circle-border">
+          <div class="circle-core"></div>
+        </div>  
+      </div>
+</div>
+<div class="showbox__two" *ngIf="errorMsg">
+    <div class="errormsg">ERROR: {{errorMsg}}</div>
+</div>
+<div class="loader-backdrop"></div>

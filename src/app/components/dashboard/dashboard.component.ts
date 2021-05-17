@@ -9,12 +9,16 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 
+  errorMsg:any;
+
   pages:Array<any> = [
-    {pageName:'36-javascript-methods', pageURL:'javascript-methods'},
+    {pageName:'javascript-methods', pageURL:'javascript-methods'},
     {pageName:'javascript-shorthands', pageURL:'javascript-shorthands'},
     {pageName:'javascript-one-liners', pageURL:'javascript-one-liners'},
     {pageName:'javascript-tips', pageURL:'javascript-tips'},
     {pageName:'angular-concepts', pageURL:'angular-concepts'},
+    {pageName:'javascript-code-snippets', pageURL:'javascript-code-snippets'},
+    {pageName:'javascript-array-functions', pageURL:'javascript-array-functions'}
   ]
 
   ngOnInit(): void {

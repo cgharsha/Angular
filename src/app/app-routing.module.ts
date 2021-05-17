@@ -28,6 +28,14 @@ const routes: Routes = [
         path:'angular-concepts',
         loadChildren: () => import('./components/angular-concepts/angular-concepts.module').then(m => m.AngularConceptsModule)
     },
+    {
+        path:'javascript-code-snippets',
+        loadChildren: () => import('./components/javascript-code-snippets/javascript-code-snippets.module').then(m => m.JavascriptCodeSnippetsModule)
+    },
+    {
+        path:'javascript-array-functions',
+        loadChildren: () => import('./components/javascript-array-functions/javascript-array-functions.module').then(m => m.JavascriptArrayFunctionsModule)
+    },
     { path:'', redirectTo:'', pathMatch:'full'},
     { path:'**', redirectTo:''}
 ];

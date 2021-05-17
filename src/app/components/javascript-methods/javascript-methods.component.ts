@@ -105,6 +105,129 @@ export class JavascriptMethodsComponent implements OnInit {
     // async await functions
     // const getURL = async URL => await fetch(URL)
 
+    // Array.map()
+
+    const cars = ["Porsche", "Audi", "BMW", "Volkswagen"];
+
+    const coolCars = cars.map(car => `${car} is a pretty cool car brand!`);
+    console.log(coolCars)
+    // Result: ["Porsche is a pretty cool car brand!", "Audi is a pretty cool car brand!", "BMW is a pretty cool car brand!", "Volkswagen is a pretty cool car brand!"];
+
+    const carsWithPrice = [
+      {brand: "Porsche", price: 100000},
+      {brand: "Audi", price: 80000}
+    ];
+
+    const carsWithPriceAndTax = carsWithPrice.map((carObject) => {
+      return {
+        // Return the original car object
+        ...carObject,
+        // but also add a new value containing the price with tax
+        priceWithTax: carObject.price * 1.2
+      }
+    });
+
+    // Result:[{brand: "Porsche", price: 100000, priceWithTax: 120000},{brand: "Audi", price: 80000, priceWithTax: 96000}];
+    console.log(carsWithPriceAndTax);
+
+    // Array.filter()
+
+    const carsAndPrice = [
+      {brand: "Porsche", price: 100000},
+      {brand: "Audi", price: 80000},
+      {brand: "Toyota", price: 30000}
+    ];
+
+    const expensiveCars = carsAndPrice.filter(car => car.price >= 40000);
+    const cheapCars = carsAndPrice.filter(car => car.price < 40000);
+
+    console.log(expensiveCars);
+    console.log(cheapCars);
+
+    // Result - Expensive Cars
+    // [
+    //   {brand: "Porsche", price: 100000},
+    //   {brand: "Audi", price: 80000}
+    // ];
+    // Result - Cheap Cars
+    // [
+    //   {brand: "Toyota", price: 30000}
+    // ];
+
+    // Array.reduce()
+
+    const numbers = [13, 65, 29, 81, 47];
+
+    const total = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+    console.log(total);
+    // Result - Total:
+    // 235
+
+    const flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+      ( accumulator, currentValue ) => accumulator.concat(currentValue),
+      []
+    )
+    console.log(flattened);
+
+    // Result - Flattened:
+    // [0, 1, 2, 3, 4, 5]
+
+    // Array.forEach()
+
+    const carsforEach:Array<any> = [
+      {brand: "Porsche", price: 100000},
+      {brand: "Audi", price: 80000},
+      {brand: "Toyota", price: 30000}
+    ];
+
+    carsforEach.forEach(car => {
+      console.log(`The ${car.brand} will cost you ${car.price} before taxes`);
+    });
+
+    // Result:
+    // "The Porsche will cost you 100000 before taxes"
+    // "The Audi will cost you 80000 before taxes"
+    // "The Toyota will cost you 30000 before taxes"
+
+    // Array.find()
+
+  const carsFind = [
+    {brand: "Porsche", price: 100000},
+    {brand: "Audi", price: 80000},
+    {brand: "Toyota", price: 30000}
+  ];
+
+  const expensiveCar = carsFind.find(car => car.price >= 40000);
+  console.log(expensiveCars);
+  // Result - Expensive Car:
+  // {brand: "Porsche", price: 100000}
+
+  // Array.every()
+
+  const carsEvery = [
+    {brand: "Porsche", price: 100000, builtIn: 2018},
+    {brand: "Audi", price: 80000, builtIn: 2019},
+    {brand: "Toyota", price: 30000, builtIn: 2019}
+  ];
+
+  const carsYoungerThanFiveYears = carsEvery.every(car => car.builtIn >= 2016);
+  console.log(carsYoungerThanFiveYears);
+  // Result - Younger than 5 Years:
+  // true
+
+  // Array.some()
+
+  const carsSome = [
+    {brand: "Porsche", price: 100000, builtIn: 2018},
+    {brand: "Audi", price: 80000, builtIn: 2019},
+    {brand: "Toyota", price: 30000, builtIn: 2019}
+  ];
+  const carsOlderThanFiveYears = carsSome.some(car => car.builtIn < 2016);
+  console.log(carsSome);
+  // Result - Older than 5 Years:
+  // false
+
   }
 
 }
