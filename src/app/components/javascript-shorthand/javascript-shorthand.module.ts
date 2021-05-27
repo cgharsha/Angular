@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { JavascriptShorthandRoutingModule } from './javascript-shorthand-routing.module';
 import { JavascriptShorthandComponent } from './javascript-shorthand.component';
+import { SmartnshortJscodeComponent } from './smartnshort-jscode/smartnshort-jscode.component';
 
 
 @NgModule({
   declarations: [
-    JavascriptShorthandComponent
+    JavascriptShorthandComponent,
+    SmartnshortJscodeComponent
   ],
   imports: [
     CommonModule,

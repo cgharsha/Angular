@@ -6,6 +6,13 @@
         <ul>
             <li *ngFor="let page of pages">
                 <span [routerLink]='page.pageURL'>{{ page.pageName }}</span>
+                <ng-container *ngIf="page.subPages">
+                    <ul>
+                        <li *ngFor="let subpage of page.subPages">
+                            <span [routerLink]='page.pageURL + "/" + subpage.pageURL'>{{ subpage.pageName }}</span>
+                        </li>
+                    </ul>
+                </ng-container>
             </li>
         </ul>
         <!-- <app-inline-loader></app-inline-loader> -->

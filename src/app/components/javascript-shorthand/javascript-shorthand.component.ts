@@ -310,6 +310,8 @@ export class JavascriptShorthandComponent implements OnInit {
     const objEntriesArr = Object.entries(person);
     console.log(objEntriesArr);
 
+    
+
 
   }
 

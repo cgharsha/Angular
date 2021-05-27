@@ -13,7 +13,9 @@ export class DashboardComponent implements OnInit {
 
   pages:Array<any> = [
     {pageName:'javascript-methods', pageURL:'javascript-methods'},
-    {pageName:'javascript-shorthands', pageURL:'javascript-shorthands'},
+    {pageName:'javascript-shorthands', pageURL:'javascript-shorthands', subPages:[
+      {pageName:'smart-and-short-jscode', pageURL:'smart-and-short-jscode'}
+    ]},
     {pageName:'javascript-one-liners', pageURL:'javascript-one-liners'},
     {pageName:'javascript-tips', pageURL:'javascript-tips'},
     {pageName:'angular-concepts', pageURL:'angular-concepts'},
