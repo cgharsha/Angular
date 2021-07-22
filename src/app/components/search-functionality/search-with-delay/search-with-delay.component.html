@@ -1,0 +1,19 @@
+<div class="component-subsection-wrap">
+    <div class="component-subsection-header">
+        Search with Delay
+    </div>
+    <div class="component-subsection-content">
+        <div class="search-box">
+            <input type="text" (keydown)="keydownResults()" (keyup)="keyupResults()" (focusout)="focusOutFunction()" [(ngModel)]="searchValue" >
+            <ng-container *ngIf="isSearchValue">
+              <div class="drop-down-list">
+                <ul>
+                  <li *ngFor="let country of filteredItems">
+                    <span (click)="selectSearch(country)">{{country.name}}</span>
+                  </li>
+                </ul>
+              </div>
+            </ng-container>
+          </div> 
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="component-subsection-wrap">
+    <div class="component-subsection-header">
+        Search with Options
+    </div>
+    <div class="component-subsection-content">
+        <div class="search-box">
+        <div (change)="updateResults()" (keyup)="updateResults()">
+            <input type="text" placeholder="Search" [(ngModel)]="searchValue">
+        
+            <select [(ngModel)]="filterOption">
+            <option value="all">All</option>
+            <option value="angular">Angular</option>
+            <option value="ionic">Ionic</option>
+            <option value="react">React</option>
+            </select>
+        </div>
+        
+        <div *ngFor="let item of filteredItems">
+            {{ item.project }} => {{ item.type }}
+        </div>
+          </div> 
+    </div>
+</div>

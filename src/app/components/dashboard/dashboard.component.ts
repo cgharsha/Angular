@@ -20,7 +20,8 @@ export class DashboardComponent implements OnInit {
     {pageName:'javascript-tips', pageURL:'javascript-tips'},
     {pageName:'angular-concepts', pageURL:'angular-concepts'},
     {pageName:'javascript-code-snippets', pageURL:'javascript-code-snippets'},
-    {pageName:'javascript-array-functions', pageURL:'javascript-array-functions'}
+    {pageName:'javascript-array-functions', pageURL:'javascript-array-functions'},
+    {pageName:'search-methods', pageURL:'search-methods'},
   ]
 
   ngOnInit(): void {

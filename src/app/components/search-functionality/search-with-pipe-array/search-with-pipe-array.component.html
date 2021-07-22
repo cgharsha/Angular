@@ -1,0 +1,31 @@
+<div class="component-subsection-wrap">
+    <div class="component-subsection-header">
+        Search with Pipe Array
+    </div>
+    <div class="component-subsection-content">
+        <div class="custom-search">
+            <div class="form-item">
+                <label for="name">Name </label>
+                <!-- <input type="text" id="name" [formControl]="name"/> -->
+                <input type="text" id="name" [(ngModel)]="name"/>
+            </div>
+            <div class="form-item">
+                <label for="cat">Category </label>
+                <!-- <input type="text" id="cat" [formControl]="category"/> -->
+                <input type="text" id="cat" [(ngModel)]="category"/>
+            </div>
+            <div *ngIf="name || category">
+                <table>
+                    <tr>
+                      <th>Name</th>
+                      <th>Category</th>
+                    </tr>
+                    <tr *ngFor="let item of array | searcharray:[name, category]:['name', 'catName'];">
+                      <td>{{item.name}}</td>
+                      <td>{{item.catName}}</td>
+                    </tr>
+                  </table>
+            </div>
+          </div>
+    </div>
+</div>

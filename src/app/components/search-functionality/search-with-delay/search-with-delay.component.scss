@@ -1,0 +1,28 @@
+@import '../../../../styles/variables';
+
+.component-subsection-wrap{
+    width: 100%;
+    padding: 1rem 1rem 1rem 1rem;
+    .component-subsection-header{
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+    }
+    .component-subsection-content{
+        width: 100%;
+        .search-box {
+            position: relative;
+            .drop-down-list {
+                position: absolute;
+                border: 1px solid var(--theme-border);
+                padding: 0.25rem;
+                width: auto;
+                ul{
+                    li{
+                        padding: 0.25rem 0 0.25rem 0;
+                        border-bottom: 1px solid var(--theme-border);
+                    }
+                }
+            }
+        }
+    }
+}

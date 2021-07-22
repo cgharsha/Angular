@@ -36,6 +36,10 @@ const routes: Routes = [
         path:'javascript-array-functions',
         loadChildren: () => import('./components/javascript-array-functions/javascript-array-functions.module').then(m => m.JavascriptArrayFunctionsModule)
     },
+    {
+        path:'search-methods',
+        loadChildren: () => import('./components/search-functionality/search-functionality.module').then(m => m.SearchFunctionalityModule)
+    },
     { path:'', redirectTo:'', pathMatch:'full'},
     { path:'**', redirectTo:''}
 ];
