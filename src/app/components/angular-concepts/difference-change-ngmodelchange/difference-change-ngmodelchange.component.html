@@ -1,0 +1,13 @@
+<div class="component-subsection-wrap">
+    <div class="component-subsection-header">
+        Difference between change and ngmodelchange
+    </div>
+    <div class="component-subsection-content">
+        <div class="search-box">
+            <input [value]="foo" (change)="changeFn($event)">
+            <p>{{ foo }}</p>
+            <input [ngModel]="bar" (ngModelChange)="modelChangeFn($event)">
+            <p>{{ bar }}</p>
+        </div> 
+    </div>
+</div>
