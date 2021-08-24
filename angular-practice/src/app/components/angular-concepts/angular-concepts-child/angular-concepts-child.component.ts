@@ -9,7 +9,7 @@ export class AngularConceptsChildComponent implements OnInit, AfterViewInit {
 
   constructor(private cdRef: ChangeDetectorRef ) { }
 
-  @Input() retrieveParentMessageToChild:any;
+  @Input() retrieveParentMessageToChild?:any;
   @Output() messageEvent = new EventEmitter<string>();
   messageFromChild:string = 'This is a Message from Child to Parent via ViewChild with After ViewInit';
   messageThruEventEmitter = 'This is Message thru Event Emitter';

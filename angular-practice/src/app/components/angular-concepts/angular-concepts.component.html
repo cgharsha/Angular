@@ -1,28 +1,31 @@
 <div class="component-section-wrap">
-    <div class="component-section-header">
-        Angular Concepts
+  <div class="component-section-header">Angular Concepts</div>
+  <div class="component-section-content">
+    <p>angular-concepts works!</p>
+    <div>{{ childMessage }}</div>
+
+    <div>{{ messageFromChild }}</div>
+
+    <div #elementRefExample></div>
+
+    <button (click)="openDialog()">Open Dialog</button>
+  </div>
+  <div class="component-section-content">
+    <app-angular-concepts-child
+      [retrieveParentMessageToChild]="parentMessage"
+      (messageEvent)="recieveMessageFromChild($event)"
+    ></app-angular-concepts-child>
+
+    <div>
+      <app-split-two-way-binding
+        [(value)]="twoWayMessage"
+      ></app-split-two-way-binding>
+
+      {{twoWayMessage}}
     </div>
-    <div class="component-section-content">
-        <p>angular-concepts works!</p>
-        <div>{{ childMessage }}</div>
 
-        <div>{{ messageFromChild }}</div>
-
-        <div #elementRefExample>
-        </div>
-
-        <button (click)="openDialog()">Open Dialog</button>
+    <div>
+      <app-difference-change-ngmodelchange></app-difference-change-ngmodelchange>
     </div>
-    <div class="component-section-content">
-        <app-angular-concepts-child 
-        [retrieveParentMessageToChild]="parentMessage"
-        (messageEvent)= "recieveMessageFromChild($event)"
-        ></app-angular-concepts-child>
-
-        <div>
-            <app-difference-change-ngmodelchange></app-difference-change-ngmodelchange>
-        </div>
-    </div>
+  </div>
 </div>
-
-

@@ -7,6 +7,7 @@ import { AngularConceptsDialogComponent } from './angular-concepts-dialog/angula
 import { AngularConceptsChildComponent } from './angular-concepts-child/angular-concepts-child.component';
 import { DifferenceChangeNgmodelchangeComponent } from './difference-change-ngmodelchange/difference-change-ngmodelchange.component';
 import { FormsModule } from '@angular/forms';
+import { SplitTwoWayBindingComponent } from './split-two-way-binding/split-two-way-binding.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     AngularConceptsComponent,
     AngularConceptsDialogComponent,
     AngularConceptsChildComponent,
-    DifferenceChangeNgmodelchangeComponent
+    DifferenceChangeNgmodelchangeComponent,
+    SplitTwoWayBindingComponent
   ],
   imports: [
     CommonModule,

@@ -1,6 +1,35 @@
 <div class="component-section-wrap">
-  <div class="component-section-header">Async Await Promise</div>
+  <div class="component-section-header">Async Await with Promise</div>
   <div class="component-section-content">
-    <p>angular-async-await-promise works!</p>
+    <div>Synchronous Progress: {{ message }}</div>
+    <div>
+      Async Response:
+      <pre>{{ response | json }}</pre>
+    </div>
+    <button class="btn btn-primary" (click)="fetchData()">
+      Get Data | async await
+    </button>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <div>Asynchronous Progress: {{ messageAlt }}</div>
+    <div>
+      Async Response:
+      <pre>{{ responseAlt | json }}</pre>
+    </div>
+    <button class="btn btn-primary" (click)="fetchDataAlt()">
+      Get Data | subscribe
+    </button>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <div>Value: {{ relay }}</div>
+    <div>
+      Data:
+      <pre>{{ responseAltData | json }}</pre>
+    </div>
+    <button (click)="doSomething()">GO!</button>
   </div>
 </div>
