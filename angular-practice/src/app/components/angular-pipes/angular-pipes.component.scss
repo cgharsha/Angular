@@ -1,0 +1,78 @@
+@import '../../../styles/variables';
+
+.component-section-wrap{
+    width: 100%;
+    padding: 4rem 1rem 2rem 1rem;
+    .component-section-header{
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+    }
+    .component-section-content{
+        width: 100%;
+        .container {
+            margin-top: 50px;
+            .row{
+                margin: 0 0 1rem 0;
+               .row-item{
+                   input{
+                       padding: 0.25rem 0.5rem;
+                       margin: 0 0 0.5rem 0;
+                       border-radius: 0.25rem;
+                       border: solid 1px;
+                   }
+                   .btn {
+                    padding: 0.5rem 0.75rem;
+                    margin: 0.25rem 0 0 0;
+                    border: none;
+                    color: #ffffff;
+                    &:disabled {
+                      opacity: 0.5;
+                    }
+                    &.btn-primary {
+                      background: #0300cc;
+                    }
+                    &.btn-danger {
+                      background: #ff0000d5;
+                    }
+                  }
+                   .list-group{
+                       margin: 0.5rem 0 0 0;
+                       .list-group-item{
+                           padding: 0.5rem 0.75rem;
+                           border: solid 1px;
+                           border-bottom: none;
+                           border-radius: 0.25rem;
+                           position: relative;
+                           color: #000000;
+                           &:last-child{
+                            border-bottom: solid 1px;
+                           }
+                           &.list-group-item-success{
+                               background: #97fd97;
+                           }
+                           &.list-group-item-warning{
+                               background: #fffd7d;
+                           }
+                           &.list-group-item-danger{
+                               background: #ff9090;
+                           }
+                           span{
+                               background: #757575;
+                               padding: 0.25rem 1rem;
+                               border-radius: 1rem;
+                               font-size: 0.8rem;
+                               color: #ffffff;
+                               position: absolute;
+                               right: 1rem;
+                               top: .25rem;
+                           }
+                           strong{
+                               font-weight: 700;
+                           }
+                       }
+                   }
+               } 
+            }
+          }          
+    }
+}

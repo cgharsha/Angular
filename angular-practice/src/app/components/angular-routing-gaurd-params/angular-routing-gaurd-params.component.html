@@ -1,0 +1,48 @@
+<div class="component-section-wrap">
+  <!-- <div class="component-section-header">Angular Routing</div> -->
+  <div class="component-section-content">
+    <div class="container">
+      <div class="row">
+        <div class="row-item">
+          <ul class="nav nav-tabs">
+            <li
+              role="presentation"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <a routerLink="/angular-routing-gaurd-params">Home</a>
+            </li>
+            <li role="presentation" routerLinkActive="active">
+              <a routerLink="servers">Servers</a>
+            </li>
+            <li role="presentation" routerLinkActive="active">
+              <a [routerLink]="['users']">Users</a>
+            </li>
+            <!-- <li role="presentation"><a routerLink="/angular-routing-gaurd-params/servers">Servers</a></li>
+                  <li role="presentation"><a [routerLink]="['/angular-routing-gaurd-params/users']">Users</a></li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-item">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+      <!-- <div class="row">
+              <div class="row-item">
+                <app-home></app-home>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row-item">
+                <app-users></app-users>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row-item">
+                <app-servers></app-servers>
+              </div>
+            </div> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="component-section-wrap">
+    <div class="component-section-header"></div>
+    <div class="component-section-content">
+      <div class="row">
+        <div class="row-item">
+            <p>User with ID {{ user.id | json }} loaded.</p>
+            <p>User name  {{ user.name }}</p>
+            <hr>
+            <a [routerLink]="['/angular-routing-gaurd-params/users', 10, 'Harsha']">Load Harsha (10)</a>
+        </div>
+      </div>
+    </div>
+  </div>

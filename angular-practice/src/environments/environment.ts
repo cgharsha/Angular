@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  backEndURL:'https://ng-course-4f7ff-default-rtdb.firebaseio.com/',
+  addSlash:''
 };
 
 /*

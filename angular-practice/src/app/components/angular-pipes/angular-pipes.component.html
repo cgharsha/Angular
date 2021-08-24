@@ -1,0 +1,46 @@
+<div class="component-section-wrap">
+  <div class="component-section-header">Angular Pipes</div>
+  <div class="component-section-content">
+    <div class="container">
+      <div class="row">
+        <div class="row-item">
+          <input type="text" [(ngModel)]="filteredSatus">
+          <br><br>
+          <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+          <br><br>
+          <h3>App Status: {{ appStatus | async }}</h3>
+          <hr>
+          <ul class="list-group">
+            <li
+              class="list-group-item"
+              *ngFor="let server of servers | filter:filteredSatus:'status' | sort:'name'"
+              [ngClass]="getStatusClasses(server)"
+            >
+              <span class="badge">
+                {{ server.status }}
+              </span>
+              <strong>{{ server.name | shorten:0:15 }}</strong> |
+              {{ server.instanceType | uppercase | reverse}} |
+              {{ server.started | date:'fullDate' | uppercase }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <a href="https://angular.io/api?query=pipe" target="_blank" rel="noopener noreferrer">Pipe reference</a>
+      </div>
+      <div class="row">
+        <div class="row-item">
+          <input type="text" [(ngModel)]="reverseString">
+          <br><br>
+          <h3>Reverse String: {{ reverseString | reverse}}</h3>
+          <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+          <br><br>
+          <h3>App Status: {{ appStatus | async }}</h3>
+          <hr>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

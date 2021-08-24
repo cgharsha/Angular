@@ -1,0 +1,79 @@
+@import "../../../styles/variables";
+
+.component-section-wrap {
+  width: 100%;
+  padding: 4rem 1rem 2rem 1rem;
+  .component-section-header {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+  }
+  .component-section-content {
+    width: 100%;
+    .container {
+      margin-top: 2rem;
+      .row {
+        margin: 1rem 0;
+        .row-item {
+          margin: 0;
+          .form-group {
+            margin: 0.5rem 0 0 0;
+            label {
+              margin: 0 0 0.25rem 0;
+              display: block;
+            }
+            input {
+              padding: 0.5rem 1rem;
+              border-radius: 0.25rem;
+              border: solid 1px #acacac;
+              width: 50%;
+            }
+            textarea {
+              padding: 0.5rem 1rem;
+              border-radius: 0.25rem;
+              border: solid 1px #acacac;
+              width: 50%;
+              resize: none;
+            }
+          }
+          .btn {
+            padding: 0.5rem 0.75rem;
+            border: none;
+            color: #ffffff;
+            &:disabled {
+              opacity: 0.5;
+            }
+            &.btn-primary {
+              background: #0300cc;
+            }
+            &.btn-danger {
+              background: #ff0000d5;
+            }
+          }
+          .list-group {
+            .list-item {
+              padding: 0.5rem;
+              border: solid 1px #acacac;
+              margin: 0.5rem 0;
+              border-radius: 0.25rem;
+              h3 {
+                font-size: 1.5rem;
+              }
+              p {
+                padding: 0.5rem 0.25rem;
+                border-top: solid 1px #acacac;
+              }
+            }
+          }
+          .alert{
+            padding: 0.5rem;
+            &.alert-danger{
+              border: solid 1px #ff0000d5;
+              color: #ff0000d5;
+              border-radius: 0.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

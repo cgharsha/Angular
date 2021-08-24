@@ -8,8 +8,10 @@ import { SearchWithDelayComponent } from './search-with-delay/search-with-delay.
 import { SearchWithPipeComponent } from './search-with-pipe/search-with-pipe.component';
 import { SearchWithOptionComponent } from './search-with-option/search-with-option.component';
 import { SearchWithPipeArrayComponent } from './search-with-pipe-array/search-with-pipe-array.component';
-import { SearchPipe } from 'src/app/shared/pipes/search.pipe';
 import { SearchArrayPipe } from 'src/app/shared/pipes/search-array.pipe';
+import { SearchPipe } from 'src/app/shared/pipes/search.pipe';
+
+
 
 
 @NgModule({

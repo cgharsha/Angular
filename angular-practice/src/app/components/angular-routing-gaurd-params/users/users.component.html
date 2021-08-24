@@ -1,0 +1,22 @@
+<div class="component-section-wrap">
+  <div class="component-section-header"></div>
+  <div class="component-section-content">
+    <div class="row">
+      <div class="row-item">
+        <div class="list-group">
+          <a
+            [routerLink]="['../users', user.id, user.name]"
+            class="list-group-item"
+            *ngFor="let user of users"
+          >
+            {{ user.name }}
+          </a>
+        </div>
+      </div>
+      <div class="row-item">
+        <router-outlet></router-outlet>
+        <!-- <app-user></app-user> -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+@import '../../../../../styles/variables';
+
+.component-section-wrap{
+    width: 100%;
+    padding: 0rem 1rem 2rem 1rem;
+    .component-section-header{
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+    }
+    .component-section-content{
+        width: 100%;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="component-section-wrap">
+  <div class="component-section-header"></div>
+  <div class="component-section-content">
+    <!-- <h4>Welcome to Server Manager 4.0</h4> -->
+    <h5>{{ server.name }}</h5>
+    <p>Server status is {{ server.status }}</p>
+    <!-- <div>Some Text {{ server | json }}</div> -->
+    <button class="btn btn-primary" (click)="onEdit()">Edit Server</button>
+  </div>
+</div>
