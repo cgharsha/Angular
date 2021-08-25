@@ -6,9 +6,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./split-two-way-binding.component.scss']
 })
 export class SplitTwoWayBindingComponent implements OnInit {
-  retrieveParentMessageToChild?:string;
 
-  @Input() value?:any;
+  @Input() counter?:any;
   @Output() childMessage = new EventEmitter<any>();
 
   constructor() { }
@@ -17,8 +16,8 @@ export class SplitTwoWayBindingComponent implements OnInit {
   }
 
   sendMessageToParent(){
-    this.value = "Text changed from child component by split 2 way binding"
-    this.childMessage.emit(this.value);
+    this.counter = "Text changed from child to parent component by split 2 way binding"
+    this.childMessage.emit(this.counter);
   }
 
 }

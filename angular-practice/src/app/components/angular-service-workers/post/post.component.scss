@@ -1,0 +1,27 @@
+@import '../../../../styles/variables';
+
+.component-section-wrap{
+    width: 100%;
+    padding: 0rem 1rem 2rem 1rem;
+    .component-section-header{
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+    }
+    .component-section-content{
+        width: 100%;
+        article {
+            padding: 1rem;
+            margin: 1rem auto;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            font-family: 'Oswald', sans-serif;
+            width: 30rem;
+            max-width: 80%;
+          }
+          
+          h1 {
+            font-family: inherit;
+            font-weight: bold;
+          }
+    }
+}
+

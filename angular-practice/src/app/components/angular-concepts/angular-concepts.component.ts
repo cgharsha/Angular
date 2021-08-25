@@ -45,8 +45,8 @@ export class AngularConceptsComponent
     'This is a message from Parent Component to Child Component';
   childMessage: string = '';
   messageFromChild: string = '';
-  twoWayMessage?: any =
-    'This is a message from Parent Component to Child Component using Split 2 way data binding';
+  counter: any;
+    // 'This is a message from Parent Component to Child Component using Split 2 way data binding';
 
   @ViewChild(AngularConceptsChildComponent, { static: false }) child: any;
   @ViewChild('elementRefExample') viewDiv: any;

@@ -58,6 +58,10 @@ export class DashboardComponent implements OnInit {
       pageName: 'angular-routing-gaurd-params',
       pageURL: 'angular-routing-gaurd-params',
     },
+    {
+      pageName: 'angular-offline-capabilties-service-workers',
+      pageURL: 'angular-offline-capabilties-service-workers',
+    },
   ];
 
   ngOnInit(): void {}

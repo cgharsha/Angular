@@ -1,3 +1,4 @@
+import { AngularServiceWorkersModule } from './components/angular-service-workers/angular-service-workers.module';
 import { AngularPipesModule } from './components/angular-pipes/angular-pipes.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
@@ -129,6 +130,13 @@ const routes: Routes = [
       import(
         './components/angular-ngif-ngswitch-ngfor/angular-ngif-ngswitch-ngfor.module'
       ).then((m) => m.AngularNgifNgswitchNgforModule),
+  },
+  {
+    path: 'angular-offline-capabilties-service-workers',
+    loadChildren: () =>
+      import(
+        './components/angular-service-workers/angular-service-workers.module'
+      ).then((m) => m.AngularServiceWorkersModule),
   },
   { path: '', redirectTo: '', pathMatch: 'full' },
   { path: '**', redirectTo: '' },
