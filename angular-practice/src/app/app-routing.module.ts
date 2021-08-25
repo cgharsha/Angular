@@ -138,6 +138,13 @@ const routes: Routes = [
         './components/angular-service-workers/angular-service-workers.module'
       ).then((m) => m.AngularServiceWorkersModule),
   },
+  {
+    path: 'angular-elements',
+    loadChildren: () =>
+      import(
+        './components/angular-elements/angular-elements.module'
+      ).then((m) => m.AngularElementsModule),
+  },
   { path: '', redirectTo: '', pathMatch: 'full' },
   { path: '**', redirectTo: '' },
 ];

@@ -7,8 +7,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class SplitTwoWayBindingComponent implements OnInit {
 
-  @Input() counter?:any;
-  @Output() childMessage = new EventEmitter<any>();
+  @Input() message: any;
+  @Output() messageChange = new EventEmitter<any>();
 
   constructor() { }
 
@@ -16,8 +16,8 @@ export class SplitTwoWayBindingComponent implements OnInit {
   }
 
   sendMessageToParent(){
-    this.counter = "Text changed from child to parent component by split 2 way binding"
-    this.childMessage.emit(this.counter);
+    this.message = "Text changed from child to parent component by split 2 way binding"
+    this.messageChange.emit(this.message);
   }
 
 }

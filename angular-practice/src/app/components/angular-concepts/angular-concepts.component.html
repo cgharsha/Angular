@@ -2,29 +2,54 @@
   <div class="component-section-header">Angular Concepts</div>
   <div class="component-section-content">
     <p>angular-concepts works!</p>
-    <div>{{ childMessage }}</div>
-
-    <div>{{ messageFromChild }}</div>
-
-    <div #elementRefExample></div>
-
-    <button (click)="openDialog()">Open Dialog</button>
+    <div class="items">
+      <h3>ElementRef Example</h3>
+      <div>{{ childMessage }}</div>
+      <br />
+      <hr />
+      <br />
+      <div #elementRefExample></div>
+      <br />
+      <hr />
+      <br />
+      <button (click)="openDialog()">Open Dialog</button>
+    </div>
   </div>
   <div class="component-section-content">
-    <app-angular-concepts-child
-      [retrieveParentMessageToChild]="parentMessage"
-      (messageEvent)="recieveMessageFromChild($event)"
-    ></app-angular-concepts-child>
-
-    <div>
-      <app-split-two-way-binding
-      [(counter)]="counter"
-      ></app-split-two-way-binding>
-
-      {{counter}}
+    <div class="items">
+      <h3>@Input and @output Communication between components</h3>
+      <div>
+        {{ parentMessage }}
+        <br>
+        {{ messageFromChild }}
+      </div>
+      <br />
+      <button (click)="msgFromParent()">Send message to Child</button>
+      <br />
+      <br />
+      <hr />
+      <br />
+      <app-angular-concepts-child
+        [retrieveParentMessageToChild]="parentMessage"
+        (messageEvent)="recieveMessageFromChild($event)"
+      ></app-angular-concepts-child>
     </div>
 
-    <div>
+    <div class="items">
+      <h3>@Input and @output Communication with Split 2 way data binding</h3>
+      <div>{{ message }}</div>
+      <br />
+      <button (click)="msgFromParentAlt()">Send message to Child</button>
+      <br />
+      <br />
+      <hr />
+      <br />
+      <app-split-two-way-binding
+        [(message)]="message"
+      ></app-split-two-way-binding>
+    </div>
+
+    <div class="items">
       <app-difference-change-ngmodelchange></app-difference-change-ngmodelchange>
     </div>
   </div>

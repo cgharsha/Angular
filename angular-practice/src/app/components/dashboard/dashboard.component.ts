@@ -62,6 +62,10 @@ export class DashboardComponent implements OnInit {
       pageName: 'angular-offline-capabilties-service-workers',
       pageURL: 'angular-offline-capabilties-service-workers',
     },
+    {
+      pageName: 'angular-elements',
+      pageURL: 'angular-elements',
+    },
   ];
 
   ngOnInit(): void {}

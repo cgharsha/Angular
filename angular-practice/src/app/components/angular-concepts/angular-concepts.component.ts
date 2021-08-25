@@ -45,7 +45,7 @@ export class AngularConceptsComponent
     'This is a message from Parent Component to Child Component';
   childMessage: string = '';
   messageFromChild: string = '';
-  counter: any;
+  message: any = 'Initial text set from Parent to child';
     // 'This is a message from Parent Component to Child Component using Split 2 way data binding';
 
   @ViewChild(AngularConceptsChildComponent, { static: false }) child: any;
@@ -53,6 +53,14 @@ export class AngularConceptsComponent
 
   ngOnInit(): void {
     console.log(this.child);
+  }
+
+  msgFromParent(){
+    this.parentMessage = "Event based text set from Parent to child"
+  }
+
+  msgFromParentAlt(){
+    this.message = "Event based text set from Parent to child"
   }
 
   openDialog() {
@@ -87,12 +95,12 @@ export class AngularConceptsComponent
     console.log(this.viewDiv);
     this.viewDiv.nativeElement.innerHTML = 'View Child Message thru ElementRef';
     console.log(this.child);
-    setTimeout(
-      () =>
-        (this.child.retrieveParentMessageToChild =
-          'Text changes after viewInit with timeout'),
-      3000
-    );
+    // setTimeout(
+    //   () =>
+    //     (this.child.retrieveParentMessageToChild =
+    //       'Text changes after viewInit with timeout'),
+    //   3000
+    // );
     // this.child.retrieveParentMessageToChild = "Text"
     // this.child.nativeElement.innerHTML = "Text";
   }
