@@ -1,0 +1,9 @@
+<div class="component-section-wrap">
+  <div class="component-section-header">Angular Lifecylce</div>
+  <div class="component-section-content">
+    <p>angular-lifecylce works!</p>
+    <button (click)="toggle()">Hide/Show Child</button>
+    <app-child *ngIf="displayChild" [message]="'Hello'">
+    </app-child>
+  </div>
+</div>

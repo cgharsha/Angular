@@ -12,6 +12,14 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'angular-lifecycle',
+    loadChildren: () =>
+      import('./components/angular-lifecycle/angular-lifecycle.module').then(
+        (m) => m.AngularLifecycleModule
+      ),
+    //        data: {preload: true}  // Preload only this module
+  },
+  {
     path: 'javascript-methods',
     loadChildren: () =>
       import('./components/javascript-methods/javascript-methods.module').then(
@@ -144,6 +152,20 @@ const routes: Routes = [
       import(
         './components/angular-elements/angular-elements.module'
       ).then((m) => m.AngularElementsModule),
+  },
+  {
+    path: 'angular-directives',
+    loadChildren: () =>
+      import(
+        './components/angular-directives/angular-directives.module'
+      ).then((m) => m.AngularDirectivesModule),
+  },
+  {
+    path: 'angular-service',
+    loadChildren: () =>
+      import(
+        './components/angular-service/angular-service.module'
+      ).then((m) => m.AngularServiceModule),
   },
   { path: '', redirectTo: '', pathMatch: 'full' },
   { path: '**', redirectTo: '' },

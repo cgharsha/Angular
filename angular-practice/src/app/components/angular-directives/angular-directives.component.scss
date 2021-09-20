@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+
+.component-section-wrap{
+    width: 100%;
+    padding: 4rem 1rem 2rem 1rem;
+    .component-section-header{
+        font-size: 1rem;
+        margin: 0 0 1rem 0;
+    }
+    .component-section-content{
+        width: 100%;
+        .row{
+            .row-item{
+                .btn {
+                    padding: 0.5rem 0.75rem;
+                    border: none;
+                    color: #ffffff;
+                    &:disabled {
+                      opacity: 0.5;
+                    }
+                    &.btn-primary {
+                      background: #0300cc;
+                    }
+                    &.btn-danger {
+                      background: #ff0000d5;
+                    }
+                  }
+                  .list-group{
+                      border: solid 1px black;
+                      border-radius: 0.25rem;
+                      .list-group-item{
+                          border-bottom: solid 1px black;
+                          padding: 0.5rem 0.5rem;
+                          &:last-child{
+                              border: none;
+                          }
+                          &.odd{
+                              color:#fff;
+                          }
+                          &.even{
+                              color: #fff;
+                          }
+                      }
+                  }
+            }
+        }
+    }
+}

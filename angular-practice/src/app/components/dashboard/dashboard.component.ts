@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit {
 
   pages: Array<any> = [
     { pageName: 'javascript-methods', pageURL: 'javascript-methods' },
+    { pageName: 'angular-lifecycle', pageURL: 'angular-lifecycle' },
     {
       pageName: 'javascript-shorthands',
       pageURL: 'javascript-shorthands',
@@ -34,6 +35,8 @@ export class DashboardComponent implements OnInit {
       pageURL: 'javascript-array-functions',
     },
     { pageName: 'search-methods', pageURL: 'search-methods' },
+    { pageName: 'angular-service', pageURL: 'angular-service' },
+    { pageName: 'angular-directives', pageURL: 'angular-directives' },
     { pageName: 'angular-observables', pageURL: 'angular-observables' },
     { pageName: 'angular-pipes', pageURL: 'angular-pipes' },
     { pageName: 'angular-http-with-inceptors', pageURL: 'angular-http' },
@@ -62,10 +65,7 @@ export class DashboardComponent implements OnInit {
       pageName: 'angular-offline-capabilties-service-workers',
       pageURL: 'angular-offline-capabilties-service-workers',
     },
-    {
-      pageName: 'angular-elements',
-      pageURL: 'angular-elements',
-    },
+    { pageName: 'angular-elements', pageURL: 'angular-elements' },
   ];
 
   ngOnInit(): void {}

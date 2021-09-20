@@ -1,0 +1,66 @@
+<div class="component-section-wrap">
+  <div class="component-section-header">Directives</div>
+  <div class="component-section-content">
+    <div class="row">
+      <div class="row-item">
+        <button class="btn btn-primary" (click)="onlyOdd = !onlyOdd">
+          Only show odd numbers
+        </button>
+        <br /><br />
+        <ul class="list-group">
+          <!-- <li
+                  class="list-group-item"
+                  *ngFor="let number of numbers"
+                  >
+                  {{number}}
+                </li> -->
+          <ng-container *ngIf="onlyOdd">
+            <li
+              class="list-group-item"
+              *ngFor="let odd of oddNumbers"
+              [ngClass]="{ odd: odd % 2 !== 0 }"
+              [ngStyle]="{backgroundColor: odd % 2 !==0 ? 'red' : 'transparent'}"
+            >
+              {{ odd }}
+            </li>
+          </ng-container>
+          <!-- <ng-container *ngIf="!onlyOdd">
+            <li
+              class="list-group-item"
+              *ngFor="let even of evenNumbers"
+              [ngStyle]="{backgroundColor: even % 2 ===0 ? 'green' : 'transparent'}"
+              [ngClass]="{ even: even % 2 === 0 }"
+            >
+              {{ even }}
+            </li>
+          </ng-container> -->
+          <ng-container *appUnless="onlyOdd">
+            <li
+              class="list-group-item"
+              *ngFor="let even of evenNumbers"
+              [ngStyle]="{backgroundColor: even % 2 ===0 ? 'green' : 'transparent'}"
+              [ngClass]="{ even: even % 2 === 0 }"
+            >
+              {{ even }}
+            </li>
+          </ng-container>
+        </ul>
+        <ng-template [ngIf]="onlyOdd">
+          <p>Only odd</p>
+        </ng-template>
+        <br>
+        <p appBasicHighlight>Style me with basic highlight</p>
+        <!-- <p appBetterHighlight [defaultColor]="'orange'" [highlightColor]="'blueviolet'">Style me with better highlight</p> -->
+        <p [appBetterHighlight]="'blueviolet'" [defaultColor]="'orange'">Style me with better highlight</p>
+        <p [appBetterHighlight]="'blueviolet'" defaultColor="orange">Style me with better highlight</p>
+
+        <div [ngSwitch]="value">
+          <p *ngSwitchCase="5">Value is 5</p>
+          <p *ngSwitchCase="10">Value is 10</p>
+          <p *ngSwitchCase="100">Value is 100</p>
+          <p *ngSwitchDefault>Value is default</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
