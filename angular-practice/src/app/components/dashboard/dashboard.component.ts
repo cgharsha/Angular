@@ -66,6 +66,7 @@ export class DashboardComponent implements OnInit {
       pageURL: 'angular-offline-capabilties-service-workers',
     },
     { pageName: 'angular-elements', pageURL: 'angular-elements' },
+    {pageName: 'webpack-bundle-analyzer', pageURL: 'https://www.digitalocean.com/community/tutorials/angular-angular-webpack-bundle-analyzer'}
   ];
 
   ngOnInit(): void {}
